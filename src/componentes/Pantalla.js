@@ -1,4 +1,5 @@
 import React from 'react'
+import '../stylesheet/Pantalla.css'
 
 
 // Forma alternativa de definir componentes funcionales, no siempre usamos function
