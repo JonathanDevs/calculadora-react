@@ -1,4 +1,5 @@
 import React from 'react'
+import '../stylesheet/Boton.css'
 
 function Boton(props){
 
