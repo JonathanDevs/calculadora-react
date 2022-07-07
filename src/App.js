@@ -34,6 +34,13 @@ function App() {
       src={freeCodeCampLogo}
       className='freecodecamp-logo'
       alt='Logo de FreeCodeCamp' />
+      {/* Primer reto
+      Crear componente para logo de freecodecamp
+      crear archivo js describe componente funcional y reemplazar
+
+      Segundo reto
+       implementar casos o correciones que no se han manejado hasta el final del proyecto
+       ejemplo 5+-*8 */}
 
     </div>
     <div className='contenedor-calculadora'>

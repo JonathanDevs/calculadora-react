@@ -4,9 +4,11 @@ import '../stylesheet/Boton.css'
 function Boton(props) {
 
   const esOperador = valor => {
-    return isNaN(valor) && (valor != '.') && (valor != '=');// eslint-disable-next-line
+    return isNaN(valor) && (valor !== '.') && (valor !== '=');// eslint-disable-next-line
   };
 
+  /*2 formas de realizarlo*/
+  // primera seria la mas optimizada menos lineas de codigo expresado con el operador ternario
   return (
     <div
       className={`boton-contenedor ${esOperador(props.children) ? 'operador' : ''}`.trimEnd()}
@@ -14,6 +16,26 @@ function Boton(props) {
       {props.children}
     </div>
   );
+// segunda si es necesario extender el codigo puedo usar esta solucion
+/*
+if (esOperador(props.children)){
+  return(
+  <div
+      className='boton-contenedor operador'
+      onClick={() => props.manejarClic(props.children)}>
+      {props.children}
+    </div>
+    );
+}else{
+  return(
+  <div
+      className='boton-contenedor'
+      onClick={() => props.manejarClic(props.children)}>
+      {props.children}
+    </div>
+    );
+}*/
+
 }
 
 export default Boton;
