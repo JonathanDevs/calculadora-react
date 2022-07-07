@@ -1,22 +1,21 @@
-import React from 'react'
+import React from 'react';
 import '../stylesheet/Boton.css'
 
-function Boton(props){
+function Boton(props) {
 
-    const esOperador = valor => {
-      return isNaN(valor) && (valor != '.') && (valor != '=');
-    };
+  const esOperador = valor => {
+    return isNaN(valor) && (valor != '.') && (valor != '=');// eslint-disable-next-line
+  };
 
-    return (
-        <div 
-        className={`boton-contenedor ${esOperador(props.children) ? 'operador' : ''}`.trimEnd()}>
-          {props.children}
-          {/* de esta manera podremos declarar los componentes con sin la etiqueta de autocierre usando la nomenclatura
-          por defecto de html con su etiqueta de aperta y cierre
-          Nota: Se hace de esta manera porque el proyecto necesita agregar texto en el mismo y esta nomenclatura lo facilitara
-          */}
-        </div>
-    );
+  return (
+    <div
+      className={`boton-contenedor ${esOperador(props.children) ? 'operador' : ''}`.trimEnd()}
+      onClick={() => props.manejarClic(props.children)}>
+      {props.children}
+    </div>
+  );
 }
 
 export default Boton;
+// error en consola Boton.js:13 Uncaught TypeError: props.manejarClic is not a function
+//    at onClick (Boton.js:13:1)
