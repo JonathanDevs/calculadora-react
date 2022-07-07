@@ -4,7 +4,7 @@ import Boton from './componentes/Boton'
 import Pantalla from './componentes/Pantalla'
 import BotonClear from './componentes/BotonClear';
 import { useState } from 'react';
-import ( evaluate ) from 'mathjs';
+import { evaluate } from 'mathjs';
 
 
 
@@ -17,8 +17,14 @@ function App() {
     setInput(input + val);
   };
 
-  const calcularResultado = () =>{
-    setInput(evaluate(input));
+  const calcularResultado = () => {
+    if(input){
+      setInput(evaluate(input));
+    }
+    else{
+      alert("Favor ingrese valores para realizar los calculos");
+    }
+    
   };
 
   return (
