@@ -52,7 +52,10 @@ function App() {
         <Boton manejarClic={agregarInput}>/</Boton>        
       </div>
       <div className='fila'></div>
-        <BotonClear>Clear</BotonClear>
+        <BotonClear manejarClear={() => setInput('')}>
+          Clear
+        </BotonClear>
+        {/* si la funcion es sencilla puedo definirla dentro de la misma ej clear  sin asignarla a una constante*/}
     </div>
     </div>
   );
