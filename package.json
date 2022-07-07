@@ -2,7 +2,7 @@
   "name": "calculadora",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://JonathanDevs.github.io/calculadora-react",
+  "homepage": "http://jonathandevs.github.io/calculadora-react",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
